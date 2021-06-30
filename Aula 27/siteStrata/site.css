@@ -1,0 +1,88 @@
+body {
+    padding-top: 0px;
+    background-color: white;
+}
+
+header {
+    background-image: url("firstimage.jpg");
+    background-size: auto, 100%;
+    height: 100%;
+    left: 0;
+    padding: 10em 4em;
+    position: fixed;
+    text-align: right;
+    width: 28%;
+    justify-content: space-between;
+    top: 0px;
+    background-attachment: scroll, scroll;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header a img {
+    border-radius: 50%;
+    padding: 25px;
+    display: block;
+    max-width: 200px; 
+    margin-left: auto;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+header section h1 {
+    color: #FFFFFF80;
+    font-size: 1.75rem;
+    line-height: 1.75em;
+    display: float;
+    float: inline-end;
+    margin: 0px;
+}
+
+.h1-strong {
+    color: #FFFFFF;
+}
+
+footer div ul li {
+    display: inline-block;
+    text-align: center;
+    line-height: 500px;
+    width: 50px;
+    height: 50px;
+}
+
+footer div ul li i {
+    color: #FFFFFF66;
+    position: inline-block;
+    font-size: 2.50rem;
+    line-height: 50px;
+}
+
+footer section ul p {
+    color: #FFFFFF66;
+    font-size: 1.20rem;
+    text-align: center;
+}
+
+main {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main section {
+    padding: px 90px 80px;
+    margin-top: 50px;
+}
+
+.artic-title {
+    color: #787878;
+    margin: 35px 3px;
+    font-size: 1.5em;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+    padding: 117px 42px 38px;
+}
+
+.artic-p {
+    color: #A2A2A2;
+    text-align: center;
+}
