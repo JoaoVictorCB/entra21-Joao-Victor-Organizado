@@ -1,0 +1,14 @@
+Exercícios Date Time:
+
+    Exercício 1
+
+let dataParametros = new Date(2012, 2, 20, 13, 12, 0)
+console.log(dataParametros)
+
+    Exercício 2
+
+    Exercicio 3
+
+    Exercicio 4
+
+    
