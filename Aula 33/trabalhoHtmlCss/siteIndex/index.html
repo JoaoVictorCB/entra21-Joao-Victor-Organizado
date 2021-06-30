@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2301278610.js" crossorigin="anonymous"></script>
+    <title>Plano de Viagem</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Plano de Viagem: Locais que eu viajaria!</h1>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <div>
+                <ul>
+                    <li class="btn-1">
+                        <a class="p-1" href="http://127.0.0.1:5500/Aula%2033/trabalhoHtmlCss/siteDisney/disney.html">Disney, Orlando, EUA</a>
+                    </li>
+                    <li class="btn-2">
+                        <a href="http://127.0.0.1:5500/Aula%2033/trabalhoHtmlCss/siteDubai/dubai.html">Dubai, Emirados Arabes</a>
+                    </li>
+                    <li class="btn-3">
+                        <a href="http://127.0.0.1:5500/Aula%2033/trabalhoHtmlCss/siteCanyon/canyon.html">Grand Canyon, Nevada, EUA</a>
+                    </li>
+                    <li class="btn-4">
+                        <a href="http://127.0.0.1:5500/Aula%2033/trabalhoHtmlCss/siteVegas/vegas.html">Las Vegas, Nevada</a>
+                    </li>
+                    <li class="btn-5">
+                        <a href="http://127.0.0.1:5500/Aula%2033/trabalhoHtmlCss/siteRoma/roma.html">Roma, Itália</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <h1 class="title">Seja Bem-Vindo!</h1>
+            <p class="p-2">Neste website irei mostrar locais que eu preferencialmente gostaria de visitar explicando
+                um pouco sobre e mostrando imagens. Veja mais:</p>
+        </section>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="orlando.jpg" style="width:100%">
+                <div class="text">Orlando</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="dubai.jpg" style="width:100%">
+                <div class="text">Dubai</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="canyon.jpg" style="width:100%">
+                <div class="text">Grand Canyon</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="las vegas.jpg" style="width:100%">
+                <div class="text">Las Vegas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="roma.jpg" style="width:100%">
+                <div class="text">Roma, Itália</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Created by: Jaioon</h3>
+            <p>© Copyright</p>
+        </div>
+    </footer>
+
+    <script>
+         var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
