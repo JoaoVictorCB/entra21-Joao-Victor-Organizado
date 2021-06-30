@@ -1,0 +1,23 @@
+    Exercício 1-
+    function estaVazio(objeto) {
+            for (let i = 0; i < Object.values; i++)
+                console.log(objeto)
+                    return false
+        }
+
+    Exercício 2-
+    function somaPropriedades(objeto) {
+        let soma = 0
+        for(let chave in objeto){
+            if
+        }
+    }
+
+    Exercício 3-
+
+
+
+    // Exercício Metodos Objeto:
+
+    Exercício 1-
+    
