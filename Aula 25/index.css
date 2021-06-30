@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+}
+
+.title {
+    text-align: center;
+}
+
+.paragraph1 {
+    text-align: center;
+    text-indent: 30px;
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

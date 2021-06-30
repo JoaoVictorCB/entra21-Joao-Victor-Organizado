@@ -1,0 +1,121 @@
+    Exercício 2-
+    index.html:
+        <h1>Algumas marcas</h1><br>
+        <p><em>Este parágrafo está em Itálico.</em></p><br>
+        <p><ins>Este parágrafo está sublinhado...</ins></p><br>
+        <p>Utilizando a marca BIG <small>e a marca small</small></p><br>
+        <p>Caracteres especiais: &copy;copyright ...</p>
+
+    Exercício 3-
+    index.html:
+        <h1><strong>FONTES:</strong></h1>
+        <p class="green-text"><small>"No mundo dos negócios todos são pagos com duas moedas: Dinheiro e Experiência... Agarre a experiência primeiro, o dinheiro virá depois." --Harold Geenen</small></p>
+        <p class="red-text">"Há homens que lutam um dia e são bons.<br>
+        Há outros que lutam muitos dias e são melhores.</p>
+        <p class="blue-text">Mas há os que lutam todos os dias e estes são imprescindíveis."<br><br>
+        --Bertolt Brecht
+        </p>
+
+    index.css:
+        .green-text {
+        color: lime;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .blue-text {
+            color: blue;
+        }
+
+        Exercício 4-
+        index.html:
+        <h1 class="blue-title">A CONSTRUÇÃO</h1>
+        <img class="babel-tower" src="https://sites.google.com/site/desenvolvimentowebi20121/home/quadro-de-avisos/listadeexercicios01-imagens/anjo.jpg" alt="Foto Torre de Babel"><br>
+        <p class="p1">Eles ergueram a Torre de Babel</p>
+        <p class="p2">Para escalar o Céu,</p>
+        <p class="p3">Mas Deus não estava lá!</p>
+        <p class="p4">Estava ali mesmo, entre eles,</p>
+        <p class="p5">ajudando a construir a torre.</p><br>
+
+        <p class="p6"><strong><em>Mário Quintana</em></strong></p>
+
+    index.css:
+        body {
+        background-color: gray;
+        }
+
+        .blue-title {
+            color: blue;
+            text-align: center;
+        }
+
+        img.babel-tower {
+            display: block;
+            margin-left: auto;
+            margin-right: auto   
+        }
+
+        .p1 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .p2 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .p3 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .p4 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .p5 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .p6 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        Exercício 5-
+    index.html:
+        <h1 class="lorem-ipsum">Lorem Ipsum</h1><br>
+        <img class="Lorem" src="Lorem.jpg" alt="Lorem Ipsum">
+        <p class="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sodales velit lacus. Mauris gravida aliquam venenatis. Donec felis ex, mattis et dolor non, semper faucibus nibh. In viverra diam ac justo euismod, vitae dignissim diam ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Duis tincidunt feugiat nulla sit amet euismod. Vivamus a sapien vel massa tempor placerat. Vestibulum rutrum cursus dapibus. Duis eleifend ipsum nulla, in lobortis nisl pulvinar a. Nullam eu fermentum tortor, sed gravida arcu. Donec eget arcu porttitor, congue massa sed, fermentum lacus. Morbi sit amet purus at mauris tristique tincidunt. Morbi lorem sapien, ullamcorper et enim eget, posuere sodales quam. Sed eu accumsan erat, id congue risus.</p><br>
+        <p class="fonte">Fonte: www.lipsum.com</p>
+
+    index.css:
+        body {
+        background-color: #40404A;
+        }
+
+        .lorem-ipsum {
+            color: #D9EFA4;
+        }
+
+        .ipsum {
+            color: white;
+            text-align: justify;
+        }
+
+        .fonte {
+            color: #E8F9C4;
+        }
+
+        Exercício 6-
