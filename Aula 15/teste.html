@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                let matriz = []
+    for (let i = 0; i < 3; i++) {
+        matriz[i] = []
+        for (let j = 0; j < 4; j++) {
+            if (j === 0) {
+                matriz[i][j] = prompt(`Digite o nome do ${i + 1} aluno`)
+            } else {
+                matriz[i][j] = +prompt(`Digite a nota do ${i + 1}o aluno`)
+            }                    
+        }
+    }
+    
+    for (let i = 0; i < 3; i++) {                
+        let acumuladorNotas = 0
+        for (let j = 1; j < 4; j++) {
+            acumuladorNotas += matriz[i][j]
+        }
+
+        let media = acumuladorNotas / 3
+        matriz[i].push(media)
+
+        media >= 6 ? matriz[i].push("Aprovado") : matriz[i].push("Reprovado")
+    }
+
+    let mostrarMatriz = ""
+    for (let i = 0, tamanhoLinhaMatriz = matriz.length; i < tamanhoLinhaMatriz; i++) {
+        for (let j = 0, tamanhoColunaMatriz = matriz[i].length; j < tamanhoColunaMatriz; j++) {
+            mostrarMatriz += matriz[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
+
+    </script>
+</body>
+</html>

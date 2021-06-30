@@ -1,0 +1,132 @@
+    Exercício 1-
+                let matriz = []
+            let quantidadeMaior10 = 0
+            for (let i = 0; i < 3; i++) {
+                matriz[i] = []
+                for (let j = 0; j < 3; j++) {
+                    matriz[i][j] = +prompt("Digite um número")
+
+                    if (matriz[i][j] > 10) {
+                        quantidadeMaior10++
+                    }
+                }
+            }
+            console.log(`A quantidade de elementos digitados que são maiores que 10 é: ${quantidadeMaior10}`)
+
+    Exercício 2-
+        let matrizIdentidade = []
+
+    for (let i = 0; i < 5; i++) {
+        matrizIdentidade[i] = []
+        for (let j = 0; j < 5; j++) {
+            i === j ? matrizIdentidade[i][j] = 1 : matrizIdentidade[i][j] = 0
+        }    
+    }
+
+    let mostrarMatriz = ""
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            mostrarMatriz += matrizIdentidade[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
+
+    Exercício 3-
+    let matriz = []
+    for (let i = 0; i < 3; i++) {
+	let elemento = x
+    
+	matriz[i] = []
+    }
+    for (let j = 0; j < 3; j++) {
+    console.log("digite o numero dos vetores")
+
+    Exercício 4-
+    let matriz = []
+    for (let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for (let j = 0; j < 3; j++) {
+    matriz[i][j] = +prompt("Digite um número")
+
+    }
+
+    {
+    let matriz = []
+    for (let i = 0; i < 3; i++) {
+    matriz[i] = []
+    for (let j = 0; j < 3; j++) {
+    matriz[i][j] = +prompt("Digite um número")
+    }
+
+    {
+    for (i = 0 ; i < 3; i ++)
+    for (j = 0 ; j < 3 ; j ++) {
+                
+    if (M1 [i] [j]> M2 [i] [j])
+    M3 [i] [j] = M1 [i] [j];
+    if else M3 [i] [j] = M2 [i] [j];
+    console.log ( " \ n O maior elemento da posição [% d] [% d] é:% d " , i, j, M3 [i] [j]);}
+
+    Exercício 5-
+     {
+    let matriz[]
+    for (i=0;i<3;i++){
+    for (j=0;j<3;j++){
+    let("%6d",a[i][j]);
+    };
+  console.log("\n");
+  };
+  console.log("\n");
+    };
+
+    let matriz[] {
+    let v[3][3];
+    let i,j,soma=0 ;
+
+  for (i=0;i<3;i++) {
+    for (j=0;j<3;j++) {
+
+     console.log("Informe o valor do elemento %d/%d",i,j);
+     console.log("%d",&v[i][j]);
+    }
+  };
+  for (i=0;i<3;i++) {
+    soma += v[i][3-i-1];
+  };
+
+    Exercício 6-
+        let matriz = []
+    for (let i = 0; i < 3; i++) {
+        matriz[i] = []
+        for (let j = 0; j < 4; j++) {
+            if (j === 0) {
+                matriz[i][j] = prompt(`Digite o nome do ${i + 1} aluno`)
+            } else {
+                matriz[i][j] = +prompt(`Digite a nota do ${i + 1}o aluno`)
+            }                    
+        }
+    }
+    
+    for (let i = 0; i < 3; i++) {                
+        let acumuladorNotas = 0
+        for (let j = 1; j < 4; j++) {
+            acumuladorNotas += matriz[i][j]
+        }
+
+        let media = acumuladorNotas / 3
+        matriz[i].push(media)
+
+        media >= 6 ? matriz[i].push("Aprovado") : matriz[i].push("Reprovado")
+    }
+
+    let mostrarMatriz = ""
+    for (let i = 0, tamanhoLinhaMatriz = matriz.length; i < tamanhoLinhaMatriz; i++) {
+        for (let j = 0, tamanhoColunaMatriz = matriz[i].length; j < tamanhoColunaMatriz; j++) {
+            mostrarMatriz += matriz[i][j] + "\t"
+        }
+        mostrarMatriz += "\n"
+    }
+
+    console.log(mostrarMatriz)
