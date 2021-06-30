@@ -1,0 +1,150 @@
+        Exercício 1-
+                function ehPositivo(numero) {
+                        return numero > 0
+            }
+                let numero = +prompt("Digite um número")
+                console.log(ehPositivo(numero))
+        
+
+        Exercício 2-
+        let numero1 = +prompt("Digite um número")
+        let numero2 = +prompt("Digite outro número")
+
+        function valores(numero1, numero2) {
+        if (numero1 > numero2) {
+                        return numero2
+                } return numero1
+        }
+        
+        let menorNumero = valores(numero1, numero2)
+        console.log(`Resultado ${menorNumero}`)
+
+        Exercício 3-
+        let numero1 = +prompt("Digite um número")
+        let numero2 = +prompt("Digite outro número")
+
+        function valoresPotencias(numero1, numero2) {
+        if (numero1 ** numero2) {
+                        return 
+                }
+        }
+        console.log(`Resultado ${numero1 ** numero2}`)
+        
+
+        Exercício 4-
+        let notaa = +prompt("Digite uma nota")
+        let notab = +prompt("Digite outra nota")
+        let notac = +prompt("Digite outra nota")
+
+        function mediaNotas(notaa, notab, notac){
+
+                let media = (notaa + notab + notac) / 3
+                return media
+        }
+        let media = mediaNotas(notaa, notab, notac)
+        console.log(`Resultado ${media.toFixed(2)}`)
+        
+
+        Exercício 5-
+        function obtemConceito(media) {
+        let conceito
+        if (media < 5) {
+                    conceito = "D"
+        } else if (media < 7) {
+                    conceito = "C"
+        } else if (media < 9) {
+                conceito = "B"
+        } else {
+                conceito = "A"
+        }
+        return conceito 
+        }      
+
+
+        Exercício 6-
+        function calculaPesoIdeal(altura, sexo) {
+                let pesoIdeal
+
+                switch(sexo) {
+                    case "M":
+                        pesoIdeal = 62.1 * altura - 44.7
+                        break
+                    case "F":
+                        pesoIdeal = 72.7 * altura - 58
+                        break
+                    default:
+                        throw TypeError("Valor de sexo é inválido!")
+                }
+
+                return pesoIdeal
+            }
+
+            let altura = +prompt("Digite a altura")
+            let sexo = prompt("Digite seu sexo").toUpperCase()
+
+            try {
+                console.log(calculaPesoIdeal(altura, peso))
+            } catch(e) {
+                console.log("Erro: " + e)
+            }
+
+
+        Exercício 7-
+        function maiorMenor(numeros) {
+        let menor = numeros[0], maior = numeros[0]
+        for (let numero of numeros) {
+                if (numero > maior) maior = numero
+                if (numero < menor) menor = numero
+        }
+        return [maior, menor]
+        }            
+
+        function cadastraNumeros() {
+        let numeros = []
+        for (let i = 0; i < 50; i++) {
+                numeros[i] = Math.floor(Math.random() * 1000) + 1
+        }
+
+        return numeros
+        }
+
+        let numeros = cadastraNumeros()
+        let [maior, menor] = maiorMenor(numeros)
+
+        console.log(numeros)
+        console.log(`Maior: ${maior}\nMenor: ${menor}`)
+
+
+        Exercício 8-
+        let calculoDias = (anos, meses, dias) => anos * 365 + meses * 30 + dias
+        let anos = +prompt("Digite quantidade de anos"),
+        meses = +prompt("Digite a quantidade de meses"),
+        dias = +prompt("Digite a quantidade de dias")                        
+    
+        console.log(calculoDias(anos, meses, dias))
+
+
+        Exercício 9-
+                function quantidadeDivisores(numero) {
+        let quantidade = 0
+        for (let i = 1; i <= numero; i++) {
+        if (numero % i === 0) quantidade++
+        }
+        return quantidade
+        }
+        let numero = +prompt("Digite um número")
+
+        console.log(quantidadeDivisores(numero))
+
+
+        Exercício 10-
+        let valor+prompt("Insira um valor para o qual deseja calcular seu fatorial: "){
+        {
+        let fatoral = n
+        let("%d", &n);
+        
+        for(fatoral = 1; n > 1; n = n - 1)
+        fat = fatoral * n;
+        
+        console.log(´("\nFatorial calculado: %d"), ${fatoral}`);
+        return 0;
