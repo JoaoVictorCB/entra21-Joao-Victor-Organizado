@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let notas = [],
+        i = 0
+
+        for(let i = 0; i <= 5; ) {
+        nota = +prompt(`Digite a nota do ${i + 1} aluno`)
+
+        if (nota < 0) break
+            
+        notas[i] = nota                
+        i++
+    }
+
+    let maiorNota = 0,
+        acumuladorNotas = 0                
+    for (let nota of notas) {
+        if (nota > maiorNota) maiorNota = nota
+
+        acumuladorNotas += nota
+    }   
+    
+    let media = acumuladorNotas / 6
+
+    console.log(`Notas: ${notas}`)
+    console.log(`Média da turma: ${media.toFixed(2)}\nMaior nota: ${maiorNota}`)
+
+    </script>
+    
+</body>
+</html>
