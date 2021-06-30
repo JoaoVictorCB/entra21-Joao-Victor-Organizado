@@ -1,0 +1,76 @@
+1. B) entrada de dados (input), processamento, saída de dados (output)
+
+2. D) É um espaço na memória do computador (RAM) que armazena um dado mutável durante a execução do algoritmo.
+
+3.      let raio = Number(prompt("Insira um número"))
+        const PI = 3.14159
+        let area = PI * raio ** 2
+        console.log(`A área da circunferência de raio é ${raio} e a área é: ${area.toFixed(2)}`)     
+
+4. 
+
+5.      let nota1 = Number(prompt("Digite a nota 1"))
+        let nota2 = Number(prompt("Digite a nota 2"))
+        let media = nota1 + nota2 / 2
+        if (media > 6) {
+        console.log ("Aprovado!")
+        } else {
+            console.log("Reprovado")
+        }
+
+6.      let numero1 = Number(prompt("Digite o 1° número"))
+        let numero2 = Number(prompt("Digite o 2° número"))
+        if (numero1 > numero2) {
+            console.log(numero1)
+        }if (numero2 > numero1) {
+            console.log(numero2)
+        }if (numero1 == numero2) {
+            console.log("Os números são iguais")
+        }
+
+7.      let numero1 = Number(prompt("Digite o 1° número"))
+        let numero2 = Number(prompt("Digite o 2° número"))
+        let numero3 = Number(prompt("Digite o 3° número"))
+        let maiorNumero = numero3
+        if (numero1 > numero2 && numero1 > numero3)
+        {
+            maiorNumero = numero1
+        }
+        else if (B > A && B > C)
+        {
+            maiorNumero = numero2
+        }
+        console.log(`O maior número é ${maiorNumero}`)
+
+8.      let numero = Number(prompt("Digite um número"))
+        if (numero > 20 && numero < 50) {
+            console.log("O número está no intervalo entre 20 e 50")
+        } else {
+            console.log("O número está fora do intervalo")
+        }  
+
+9.      let numero = prompt("Qual o seu sexo?\nF-Feminino\nM-Masculino").toUpperCase()
+        let altura = prompt("Qual sua altura?").toUpperCase()
+        let pesoF = 62.1 * altura - 44.7
+        let pesoM = 72.7 * altura - 58
+        switch (numero) {
+    case "F":
+        console.log(pesoF)
+        break
+    case "M":
+            console.log(pesoM)
+        break
+        }
+
+10.     let peso = Number(prompt("Digite seu peso"))
+        let altura = Number(prompt("Digite sua altura"))
+        let IMC = peso / (altura * altura)
+        if (IMC < 18,5 && IMC == 18,5) {
+            console.log("Abaixo do peso!")
+        } else {(IMC > 18,5 && IMC < 24,9)
+            console.log("Peso normal!")
+        } if (IMC > 25 && IMC < 29,9) {
+            console.log("Acima do peso")
+        } else if (IMC > 30 && IMC == 30) {
+            console.log("OBESO!")
+        }

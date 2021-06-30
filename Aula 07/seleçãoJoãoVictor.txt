@@ -1,0 +1,277 @@
+        Exercício 1-
+        console.log(!10) // false
+
+        console.log(!!"String") // true
+
+        console.log(!!2.3) // true
+
+        console.log(Boolean(null)) // false
+
+        Exercício 2-
+        console.log(10 > 2) // true
+
+        console.log(5 >= "5") // true
+
+        console.log(5 >== "5") // SyntaxError não capturado: token inesperado '='
+
+        console.log("apple" > "pineapple") // false
+
+        console.log("2" > "12") // true
+
+        console.log(undefined == null) // true
+
+        console.log(undefined === null) // false
+
+        console.log(null == "\n0\n") // false
+
+        console.log(null === +"\n0\n") // false
+        
+        Exercício 3-
+        let numero = Number(prompt("Digite o número"))
+        if(numero > 10) 
+        {
+        alert("O valor A é maior que 10, Programa finalizado ...")}
+        else{alert("Programa finalizado ...")}
+
+        Exercício 4-
+        let numero = Number(prompt("Digite o número"))
+        if(numero% 2 == 0) 
+        {metadeNumero = numero / 2
+        alert(`${metadeNumero} \n Programa finalizando ...`)
+        }
+        else{alert("Programa finalizado ...")}
+
+        Exercício 5-
+        let numero = Number(prompt("Digite um número"))       
+        if(numero% 2 == 0) {
+        alert(`O numero é par`)
+        }
+        else{alert(`O numero é ímpar`)}
+
+        Exercício 6-
+        let numero = Number(prompt("Digite o número"))
+        if(numero> 20) {
+        if(numero <90) {
+        alert(`O número está na faixa entre 20 e 90`)
+        }else
+        alert(`O número está fora da faixa`)
+        }else alert("O número está fora da faixa")
+        }
+
+
+        Exercício 7-
+        Boolean(A> 10 && B <= 20) // false
+        Boolean(A> 10 || B <= 20) // true
+        Boolean((A === 10 || B> 20) && B === 20) // true
+        console.log(null || 2 || undefined) // 2
+        Boolean(0 && 1) // false
+
+        Exercício 8-
+        let valor1 = Number(prompt("Digite o primeiro valor"))
+        let valor2 = Number(prompt("Digite o segundo valor"))
+        let valor3 = Number(prompt("Digite o terceiro valor"))
+        if(valor1> valor2 && valor1> valor3) {
+        alert(`$ {valor1} \ n $ {valor2} \ n $ {valor3} \ nO maior valor é o: \ n $ {valor1}`)
+        } 
+        else if(valor2> valor1 && valor2> valor3) {
+        alert(`$ {valor1} \n $ {valor2} \n $ {valor3} \n O maior valor é o: \ n $ {valor2}`)
+        }
+        else if(valor3> valor1 && valor3> valor2)
+        alert(`${valor1} \n ${valor2} \n ${valor3} \n O maior valor é o: \ n ${valor3}`)
+
+        Exercício 9-
+        let a = Number(prompt("Digite o primeiro valor"))
+        let b = Number(prompt("Digite o segundo valor"))
+        a + b> 10? alert("Abaixo"): alert("Acima")
+
+        Exercício 10-
+        let ladoA = Number(prompt("Digite a medida de um lado de um triângulo"))
+        let ladoB = Number(prompt("Digite o outro lado"))
+        let ladoC = Number(prompt("Digite um outro lado"))
+        console.log(`Medida dos lados: ${ladoA}, ${ladoB}, ${ladoC}`)
+        if(ladoA == ladoB && ladoA == ladoC){console.log("Triângulo Equilátero: 3 lados iguais")}
+        else if(ladoA == ladoB && ladoA != ladoC){console.log("Triângulo Isóceles: 2 lados iguais")}
+        else if(ladoB == ladoC && ladoB != ladoA){console.log("Triângulo Isóceles: 2 lados iguais")}
+        else if(ladoC == ladoA && ladoC != ladoB){console.log("Triângulo Isóceles: 2 lados iguais")}
+        else(console.log("Triângulo Escaleno: 3 lados diferentes"))
+
+        Exercício 11-
+        let numero = Number(prompt("Digite o número"))
+        if(numero > 0){
+        let raiz = Math.sqrt(numero)
+        console.log(raiz)
+        }
+        if(numero < 0){alert(`Número inválido`)}
+
+        Exercício 12-
+        let numero = Number(prompt("Insira o Número"))
+        if (numero / 5) {
+        let divisivel = numero / 5
+        console.log(divisivel)
+        } else {alert("Não é divisível")}
+
+        Exercício 13-
+        let numero = Number(prompt("digite um numero"))
+        if (numero >= 0){
+        console.log(`esse numero é: $(Math.sqrt(numero),toFixed(2)})`)
+        } else {
+        console.log(`o quadrado do numero é: ${numero**2}`)
+        }
+        if(numero.= 0) {console.log("o quadrado do numero de $"){numero} é: ${quadrado do numero.toFixed(2)}`)}
+        else {console.log("o numero é invalido")
+
+        Exercício 14-
+        let salario = Number(prompt("Digite seu salario"))
+        let prestacao = Number(prompt("Digite sua prestação"))
+        if (prestacao < (salario * 0.2)){
+        console.log("Emprestimo concedido")
+        }
+        else{
+        console.log("Emprestimo não concedido")}
+
+
+        Exercício 15-
+        let gol1 = Number(prompt("Digite quantos gols o time fez"))
+        let gol2 = Number(prompt("Digite quantos gols o time fez"))
+        if (gol1 > gol2){
+        console.log("Vitoria do time1")
+        } 
+        else if (gol2 > gol1) {
+        console.log("Vitoria do time2")
+        }
+        else{ console.log("Empate")
+        }
+
+        Exercício 16-
+         let idade +Number(prompt("diga a sua idade"))
+        if ((idade >= 16 && idade < 18) || idade >= 70){
+        console.log("nao pode votar")
+        }else{
+        console.log("obrigatório")
+        }
+
+        Exercício 17-
+         let numero1= Number(prompt("digite o numero 1"))
+        let numero2= Number(prompt("digite o numero 2"))
+        let numero3= Number(prompt("digite o numero 3"))
+        let maior
+        let meio
+        let menor
+        if(numero1<numero2 && numero1> numero3){
+        maior= numero1
+        }else if(numero2 > numero3){
+                maior= numer3
+        }
+        if(numero1<numero2 && numero1<numero3){
+                menor = numero1
+        }else {
+        else if (numero2<numero3){
+            menor = numero2
+        }else {
+            menor = numero3
+        }
+        if((numero1 > numero2 && numero1 <numero3>)|| (numero1 < numero && numero1 >numero3)){
+        meio = numero1
+        }else if ((numero2 > numero1 && numero2 < numero3 || numero1 < numero2 && numero1>numero3)){
+                meio = numero2
+        }else {
+                meio = numero3
+        }
+        console.log(maior, meio, menor)
+
+        Exercício 18-
+        let idade = Number(prompt("Qual sua idade?"))
+        if ((idade > 18 || idade === 18) && (idade < 67 || idade === 67)) {
+            console.log("Você pode doar sangue.")
+        } else {
+            console.log("Você não pode doar sangue.")
+        }
+
+        Exercício 19-
+        let numero = Number(prompt("Digite um número"))
+        switch (numero) {
+    case 1:
+        console.log("O dia é domingo")
+        break
+    case 2:
+        console.log("O dia é segunda-feira")
+        break
+    case 3:
+        console.log("O dia é terça-feira")
+        break
+    case 4:
+        console.log("O dia é quarta-feira")
+        break
+    case 5:
+        console.log("O dia é quinta-feira")
+        break
+    case 6:
+        console.log("O dia é sexta-feira")
+        break
+    case 7:
+        console.log("O dia é sábado")
+        break
+    default:
+        console.log("O número digitado não corresponde à um dia")
+        break
+        }
+
+        Exercício 20-
+        let numero = Number(prompt("Digite um número"))
+        switch (numero) {
+    case 1:
+        console.log("O mês é Janeiro")
+        break
+    case 2:
+        console.log("O mês é Fevereiro")
+        break
+    case 3:
+        console.log("O mês é Março")
+        break
+    case 4:
+        console.log("O mês é Abril")
+        break
+    case 5:
+        console.log("O mês é Maio")
+        break
+    case 6:
+        console.log("O mês é Junho")
+        break
+    case 7:
+        console.log("O mês é Julho")
+        break
+    case 8:
+        console.log("O mês é Agosto")
+        break
+    case 9:
+        console.log("O mês é Setembro")
+        break
+    case 10:
+        console.log("O mês é Outubro")
+        break
+    case 11:
+        console.log("O mês é Novembro")
+        break
+    case 12:
+        console.log("O mês é Dezembro")
+        break
+    default:
+        console.log("O número digitado não corresponde à um mês")
+        break
+        }
+
+        Exercício 21-
+        let numero = prompt("Em qual turno você estuda?\nM-matutino\nV-vespertino\nN-noturno").toUpperCase()
+        switch (numero) {
+    case "M":
+        console.log("Bom Dia!")
+        break
+    case "V":
+        console.log("Boa Tarde!")
+        break
+    case "N":
+        console.log("Boa Noite!")
+        break
+    default:
+        console.log("Valor Inválido!")
+        }
