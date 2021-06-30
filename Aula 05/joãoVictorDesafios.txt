@@ -1,0 +1,33 @@
+        Exercício 17-
+        let numero = Number(prompt("Digite o numero"))
+        let sucessor = numero + 1
+        let antecessor = numero - 1
+        console.log(sucessor)
+        console.log(antecessor)
+
+        Exercício 18-
+        let n1 = Number(prompt("Digite um numero"))
+        const PI = 3.14159
+        let area = (4 / 3) * PI * n1 * 3
+        console.log(area)
+
+        Exercício 19-
+        let base = Number(prompt("Insira o comprimento da base de um triângulo"))
+        let altura = Number(prompt("Agora insira a altura"))
+        let area = (base * altura) / 2
+        console.log(area)
+
+        Exercício 20-
+        let preço = Number(prompt("insira o preço de um produto"))
+        let desconto = Number(prompt("agora inisira um desconto em porcento"))
+        let fim = preço *((1 - (desconto / 100)))
+        let tirou = preço * (desconto / 100)
+        console.log(`O preço final é ${fim}, descontou ${tirou}`)
+        
+        Exercício 21-
+        let nome = prompt("Insira o nome do vendedor")
+        const salario = (500)
+        let vendas = Number(prompt("numero de vendas"))
+        let valorComissão = (vendas * 15) / 2
+        let valorFinal = salario + valorComissão
+        console.log(valorFinal)
