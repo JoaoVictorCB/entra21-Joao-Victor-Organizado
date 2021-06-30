@@ -1,0 +1,32 @@
+    Arrays:
+
+    Exercício 1-
+
+    Exercício 2-
+
+    Number:
+
+    Exercício 1-
+    let lerNumero (numero) 
+    let numero = +prompt(numero("Digite um número"))
+
+    Exercício 2-
+
+    Exercício 3-
+    let i = 0;
+    while (i != 10) {
+        i += 0.2;
+    } 
+    // Não foi colocado i++
+
+    // O certo seria
+
+    let i = 0;
+    while (i != 10) {
+        i += 0.2;
+        i++
+    }
+
+    String:
+
+    Exercício 1-
