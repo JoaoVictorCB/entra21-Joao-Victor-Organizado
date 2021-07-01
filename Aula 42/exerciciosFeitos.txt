@@ -58,6 +58,20 @@ Exercícios Date Time:
 
     Exercicio 6
 
+        function formataData(data) {
+            let passada = ((new Date()) - data);
+            if (passada < 1000)
+                return "agora"
+            if (passada < 60000)
+                return (passada / 1000 + " segundos atrás")
+            if (passada < 60000 * 60)
+                return ((passada / 1000) / 60 + " minutos atrás")
+            return (`${data.getDate()}.${data.getMonth()}.${data.getYear()} ${data.getHours()}:${data.getMinutes()}`)
+        }
+
+        console.log(formataData(new Date(new Date - 1)));
+        console.log(formataData(new Date(new Date - 30 * 1000)));
+        console.log(formataData(new Date(new Date - 5 * 60 * 1000)));
 
 Exercicios Agendando Funções:
 
