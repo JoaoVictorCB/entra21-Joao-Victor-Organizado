@@ -1,8 +1,7 @@
-function segundosParaAmanha() {
-    let hoje = new Date()
-    let hojeEmSegundos = hoje.getSeconds() + hoje.getHours() * 60 * 60 + hoje.getMinutes() * 60
-    let segundosDia = 24*60*60
-    return (segundosDia - hojeEmSegundos)
+function imprimeNumeros(comeco, fim) {
+    let interval = setInterval(() => {
+        if (comeco == fim) clearInterval(interval)
+        console.log(comeco)
+        comeco++
+    }, 1000)
 }
-
-console.log(segundosParaAmanha());
