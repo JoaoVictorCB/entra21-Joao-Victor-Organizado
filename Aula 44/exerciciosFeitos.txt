@@ -1,0 +1,19 @@
+Exercício Sintaxe-Classes:
+
+    Exercício 1
+
+    class Aluno {
+    matrícula
+
+
+    constructor(nome, sobrenome) {
+        this.nome = nome
+        this.sobrenome = sobrenome
+    }
+
+    dizOi() {
+        alert(this.nome)
+        }
+    }
+
+    Exercício 2
