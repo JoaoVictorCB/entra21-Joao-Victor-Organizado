@@ -3,17 +3,314 @@ Exercício Sintaxe-Classes:
     Exercício 1
 
     class Aluno {
-    matrícula
+    matricula
+    nome
+    notasProva
+    notaTrabalho
 
-
-    constructor(nome, sobrenome) {
+    constructor(matricula, nome, notasProva, notaTrabalho) {
+        this.matricula = matricula
         this.nome = nome
-        this.sobrenome = sobrenome
+        this.notasProva = notasProva
+        this.notaTrabalho = notaTrabalho
     }
 
-    dizOi() {
-        alert(this.nome)
+    media() {
+        let mediaFinal = 0
+        for (let nota of this.notasProva) {
+            mediaFinal += nota / 10 * 3
         }
+        mediaFinal += this.notaTrabalho / 10 * 2
+        return mediaFinal
     }
+    final() {
+        let mediaFinal = 0
+        for (let nota of this.notasProva) {
+            mediaFinal += nota / 10 * 3
+        }
+        mediaFinal += this.notaTrabalho / 10 * 2
+        if (mediaFinal < 6) {
+            return 0
+        }
+        return 10 - mediaFinal
+    }
+}
+
+    let aluno = new Aluno(2004, "Jaioon", [9, 10], 8)
+    console.log(aluno.media());
+    console.log(aluno.final());
+
 
     Exercício 2
+
+    class Agenda {
+    lista = []
+
+    armazenaPessoa(nome, telefone) {
+        if (this.lista.length >= 10) {
+            throw "A agenda está em seu limite(10)."
+        }
+        let pessoa = new Pessoa(nome, telefone)
+        this.lista.push(pessoa)
+    }
+    removePessoa(nome) {
+        for (let i = 0; i < this.lista.length; i++) {
+            if (this.lista[i].nome == nome) {
+                this.lista.splice(i, 1)
+                return "Deletado."
+            }
+        }
+        return "Nenhuma pessoa com este nome."
+    }
+    buscaPessoa(nome) {
+        for (let pessoa of this.lista) {
+            if (pessoa.nome == nome) {
+                return pessoa.telefone
+            }
+        }
+        return "Nenhuma pessoa com este nome."
+    }
+    imprimeAgenda() {
+        console.table(this.lista)
+    }
+    imprimePessoa(i) {
+        console.log("Nome: " + this.lista[i].nome)
+        console.log("Telefone: " + this.lista[i].telefone)
+    }
+}
+
+class Pessoa {
+    constructor(nome, telefone) {
+        this.nome = nome
+        this.telefone = telefone
+    }
+}
+
+
+    Exercício 3
+    
+    class Voo {
+    lista = []
+
+    constructor(numeroVoo, data) {
+        this.numeroVoo = numeroVoo
+        this.data = data
+        for (let i = 0; i < 100; i++) {
+            this.lista.push(false)
+        }
+    }
+    proximoLivre() {
+        return this.lista.findIndex((elm) => !elm)
+    }
+    verifica(i) {
+        if (this.lista[i]) {
+            return "Esta cadeira está ocupada."
+        }
+        return "Esta cadeira está liberada!"
+    }
+    ocupa(i) {
+        if (this.lista[i]) {
+            return false
+        }
+        return this.lista[i] = true
+    }
+    vagas() {
+        let count = 0
+        for (let vaga of this.lista) {
+            if (!vaga) {
+                count++
+            }
+        }
+        return count
+    }
+    getVoo() {
+        return this.numeroVoo
+    }
+}
+
+
+Exercício poliformismo:
+
+    Exercício 1
+
+    class Produto {
+            descricao
+            preco
+            nomeLoja
+
+            constructor(nomeLoja, preco) {
+                this.nomeLoja = nomeLoja
+                this.preco = preco
+                this.descricao = "Produto de informática"
+            }
+
+            get nomeLoja() {
+                return this.nomeLoja
+            }
+            set nomeLoja(value) {
+                this.nomeLoja = value
+            }
+
+            get preco() {
+                return this.preco
+            }
+            set preco(preco) {
+                this.preco = preco
+            }
+
+            get descricao() {
+                return this.descricao
+            }
+            set descricao(descricao) {
+                this.descricao = descricao
+            }
+        }
+
+        class Mouse extends Produto {
+            constructor(nomeLoja, preco, tipo, descricao) {
+                super(nomeLoja, preco)
+                this.tipo = tipo
+                super.descricao = descricao
+            }
+            get descricao() {
+                return this.tipo + " " + super.descricao
+            }
+        }
+        class Livro extends Produto {
+            constructor(nomeLoja, preco, autor, descricao) {
+                super(nomeLoja, preco)
+                this.autor = autor
+                super.descricao = descricao
+            }
+            get descricao() {
+                return this.autor + " " + super.descricao
+            }
+        }
+
+
+Exercício getters-setters:
+
+    Exercício 1
+
+    class Funcionario {
+    nome
+    matricula
+    salario
+
+    constructor(matricula, nome, salario) {
+        this.matricula = matricula
+        this.nome = nome
+        this.salario = salario
+    }
+
+    set matricula(matricula) {
+        if (!this.validaMatricula(matricula)) {
+            throw "Matricula inválida."
+        }
+        this.matricula = matricula
+    }
+    set nome(nome) {
+        if (!this.validaNome(nome)) {
+            throw "Nome inválido."
+        }
+        this.nome = nome
+    }
+    set salario(salario) {
+        if (!this.validaSalario(salario)) {
+            throw "Salário inválido."
+        }
+        this.salario = salario
+    }
+
+    validaMatricula(matricula) {
+        return matricula > 0 && Number.isInteger(matricula)
+    }
+    validaNome(nome) {
+        return nome.length > 4 && nome.length < 50
+    }
+    validaSalario(salario) {
+        return salario > 465
+    }
+}
+
+
+Exercício propriedades-metodos-estaticos:
+
+    Exercício 1
+
+    class Ponto2D {
+          constructor(x, y) {
+            this.x = x
+            this.y = y
+          }
+          temEixoComum(a, b) {
+              if (a == this.x || b == this.y) {
+                  return true
+              }
+              return false
+          }
+      }
+
+
+Exercício herança-prototypal:
+
+    Exercício 1
+
+    let animal = {
+    pula: null
+    }
+
+    let coelho = {
+        __proto__: animal,
+        pula: true
+    }
+
+    console.log(coelho.pula) // true
+
+    delete coelho.pula
+
+    console.log(coelho.pula) // null
+
+    delete animal.pula
+
+    console.log(coelho.pula) // undefined
+
+
+    Exercício 2
+
+    let cabeca = {
+    oculos: 1
+    }
+
+    let mesa = {
+        caneta: 3
+    }
+
+    let cama = {
+        lenco: 1,
+        travesseiro: 2
+    }
+
+    let bolso = {
+        dinheiro: 200
+    }
+
+    bolso.__proto__ = dinheiro
+    console.log(bolso.dinheiro)
+
+    cama.__proto__ = lenco
+    console.log(cama.travesseiro)
+
+    mesa.__proto__ = caneta
+    console.log(mesa.caneta)
+
+    cabeca.__proto__ = oculos
+    console.log(cabeca.oculos)
+
+    Testes:
+    console.log(bolso.caneta) // 3
+    console.log(cama.oculos) // 1
+    console.log(mesa.dinheiro) // undefined
+
+
+    Exercício 3
