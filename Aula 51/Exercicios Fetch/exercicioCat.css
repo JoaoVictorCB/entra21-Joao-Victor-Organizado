@@ -1,0 +1,15 @@
+select {
+    color: black;
+    padding: 16px;
+    font-size: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #1976d2;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
