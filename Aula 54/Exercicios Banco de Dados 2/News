@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS produtos (
+	id SERIAL PRIMARY KEY,
+	nome text NOT NULL UNIQUE,
+	preco numeric NOT NULL CHECK (preco >0)
+);
+
+CREATE TABLE IF NOT EXISTS pedidos(
+	id SERIAL PRIMARY KEY,
+	total_pedido numeric NOT NULL
+);
