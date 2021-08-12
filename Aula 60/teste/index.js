@@ -66,7 +66,7 @@ const pool = new Pool({
     user: "postgres",
     password: "123456",
     database: "node"
-// });
+});
 
 // (async () => {
 //     try {
