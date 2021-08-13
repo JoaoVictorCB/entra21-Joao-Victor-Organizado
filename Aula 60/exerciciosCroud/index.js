@@ -82,11 +82,69 @@ try {
 
 // Exercicio 3 - 
 
+function insereCliente(cliente) {
+    try {
+        await pool.query(`
+        INSERT INTO clientes (numero_documento, tipo_pessoa, rua, numero, cidade, estado, cep) VALUES
+            (55, ''Branca', 'Getúlio Vargas', 2, 'Timbó', 'SC', 89120-000)
+        )
+        `);
+    }
+    catch (error) {
+        console.log(error.message);
+    } finally {
+        pool.end();
+    }
+}
+
+function inserirEndereco() {
+    try {
+        await pool.query(`
+        INSERT INTO endereco (rua, numero, cidade, estado, cep, id_cliente) VALUES
+            ('Getúlio Vargas', 2, 'Timbó', 'SC', 89120-000, 50)
+        `);
+    }
+    catch (error) {
+        console.log(error.message);
+    } finally {
+        pool.end();
+    }
+}
 
 // Exercicio 4 - 
 
 
 // Exercicio 5 - 
 
+function insereEditoras(editora) {
+    try {
+        await pool.query(`
+        INSERT INTO endereco (nome_gerente, telefone) VALUES
+            ('Marcos', (47) 9999-9999)
+            ('Carlos', (47) 8888-8888)
+            ('Roger', (47) 7777-7777)
+            ('Cleison', (47) 6666-6666)
+            ('Roberto', (47) 5555-5555)
+        `)
+    }
+    catch (error) {
+        console.log(error.message);
+    } finally {
+        pool.end();
+    }
+}
 
 // Exercicio 6 - 
+
+function inserelivros(livros) {
+    try {
+        await pool.query(`
+        INSERT INTO endereco (isbn, nome_autor, assunto, preco, quantidade_estoque, id_editora) VALUES
+        `)
+    }
+    catch (error) {
+        console.log(error.message);
+    } finally {
+        pool.end();
+    }
+}
