@@ -1,8 +1,70 @@
-const { DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
+const { DataTypes, Sequelize, Model } = require("sequelize");
+const { hashSync, compareSync } = require("bcrypt");
 const sequelize = require("../database");
 
-const Usuario = sequelize.define("Usuario", {
+class Usuario extends Model {
+    static init(sequelize) {
+        super({
+            id: {
+                type: DataTypes.UUID,
+                primaryKey: true,
+                defaultValue: Sequelize.UUIDV4
+            },
+            nome: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            email: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                unique: true,
+                validate: {
+                    isEmail: {
+                        msg: "E-mail inválido!"
+                    }
+                }
+            },
+            senha: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                set(value) {
+                    this.setDataValue("senha", hashSync(value, 10));
+                }
+            }
+        }, {
+            sequelize
+        });
+    }
+
+    static associate(models) {
+        Usuario.belongsToMany(models.Projeto, {
+            through: "UsuariosProjetos",
+            as: {
+                singular: "projeto",
+                plural: "projetos"
+            }
+        });
+
+
+        Usuario.hasOne(models.Endereco, {
+            foreignKey: {
+                name: "idUsuario",
+                allowNull: false
+            }
+        });
+    }
+
+    checarSenha(senha) {
+        return compareSync(senha, this.senha);
+    }
+}
+
+Usuario.init({
+    id: {
+        type: DataTypes.UUID,
+        primaryKey: true,
+        defaultValue: Sequelize.UUIDV4
+    },
     nome: {
         type: DataTypes.STRING,
         allowNull: false
@@ -13,7 +75,7 @@ const Usuario = sequelize.define("Usuario", {
         unique: true,
         validate: {
             isEmail: {
-                msg: "E-mail inválido"
+                msg: "E-mail inválido!"
             }
         }
     },
@@ -23,54 +85,40 @@ const Usuario = sequelize.define("Usuario", {
         set(value) {
             this.setDataValue("senha", hashSync(value, 10));
         }
-    } 
+    }
+}, {
+    sequelize
 });
 
-(async () => {
-    // Criando tabela Usuarios
-    try {
-        await Usuario.sync({ force: true });
-        console.log("Tabela criada com sucesso!");
-    // Inserindo um usuário
-    const pedro = await Usuario.create({
-        nome: "Pedro",
-        email: "pedro@email.com",
-        senha: "123456"
-    });
-
-    // Modificando o pedro
-    pedro.email = "pedrao@email.com"
-    pedro.save();
-    console.log("E-mail do Pedro atualizado!");
-
-    // Remover Pedro
-    await pedro.destroy();
-    console.log(("Pedro foi removido d banco de dados"));
-
-    // Inserindo varios usuários
-    const usuarios = await Usuario.bulkCreate([
-        {
-            nome: "Pedro",
-            email: "pedro@email.com",
-            senha: 123456
-        },
-        {
-            nome: "José",
-            email: "jose@email.com",
-            senha: "123456"
-        }
-    ])
-    console.log("Usuários inseridos com sucesso!");
-    console.log(usuarios);
-
-    // Comparando as senhas
-    console.log(compareSync("123456", usuarios[0].toJSON().senha));
-
-    // // Criando todas as tabelas
-    // await sequelize.sync({ force: true });
-    } catch (err) {
-        console.error("Ocorreu um erro ao criar a tabela!", err);
-    } finally {
-        sequelize.close();
+Projeto.belongsToMany(Usuario, {
+    through: "UsuariosProjetos",
+    as: {
+        singular: "usuario",
+        plural: "usuarios"
     }
-})();
+});
+
+Usuario.belongsToMany(Projeto, {
+    through: "UsuariosProjetos",
+    as: {
+        singular: "projeto",
+        plural: "projetos"
+    }
+});
+
+
+Usuario.hasOne(Endereco, {
+    foreignKey: {
+        name: "idUsuario",
+        allowNull: false
+    }
+});
+Endereco.belongsTo(Usuario, {
+    foreignKey: {
+        name: "idUsuario",
+        type: DataTypes.UUID,
+        allowNull: false
+    }
+});
+
+module.exports = Usuario;
