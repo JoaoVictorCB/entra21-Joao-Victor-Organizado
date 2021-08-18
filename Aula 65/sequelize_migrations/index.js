@@ -20,7 +20,7 @@ const { sequelize, Usuario, Endereco } = require("./db/models");
         // Criando um projeto para aquele usuário
         await joao.createProjeto({
             nome: "Projeto 01",
-            quantidadeHoras: 12
+            quantidadeHoras: 10
         });
     } catch (err) {
         console.error("Ocorreu um erro: ", err);
