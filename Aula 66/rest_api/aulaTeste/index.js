@@ -106,6 +106,12 @@ app.put("/usuarios/:id", async (req, res) => {
     }
 });
 
+// Middleware de tratamento de erros
+app.use((error, req, res, next) => {
+    res.status(error.status);
+    res.json({ message: error.message });
+});
+
 app.listen(porta, () => {
     console.log(`Servidor está rodando em http://localhost:${porta}`);
 });

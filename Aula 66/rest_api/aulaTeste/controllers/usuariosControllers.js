@@ -11,9 +11,9 @@ async function getAll(req, res, next) {
     }
 }
 
-async function getOne() {
+async function getOne(req, res, next) {
     try {
-        const usuarios = await usuariosServices.getUsuarios();
+        const usuarios = await usuariosServices.getUsuario(req.params.id);
 
         res.json(usuarios);
     } catch (err) {
@@ -59,6 +59,6 @@ module.exports = {
     getAll,
     getOne,
     create,
-    update,
-    remove
+    // update,
+    // remove
 }
