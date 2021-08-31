@@ -6,6 +6,8 @@ import { Familia } from './components/Familia';
 import { MembroFamilia } from './components/MembroFamilia';
 import { Card } from './components/Card';
 import { ParOuImpar } from './components/ParOuImpar';
+import { ManipulandoEventos } from './components/ManipulandoEventos';
+import { Relogio } from './components/Relogio';
 
 
 function App() {
@@ -33,8 +35,14 @@ function App() {
         <Card>
           <ParOuImpar numero="{10}" />
           <ParOuImpar numero="{5}" />
-          <hr/>
-          <Notificacao mensagens={["Oi"]}/>
+          <hr />
+          <Notificacao mensagens={["Oi"]} />
+        </Card>
+        <Card titulo="Manipulando Eventos">
+          <ManipulandoEventos />
+        </Card>
+        <Card titulo="State">
+          <Relogio />
         </Card>
       </div>
     </div>
